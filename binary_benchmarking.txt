@@ -1,0 +1,3 @@
+Sorting time: 15.189553022384644
+Searching time : 0.11153340339660645
+main prog running time: 64.91340494155884
