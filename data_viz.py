@@ -39,5 +39,3 @@ def boxplot(Array, out_file_name, title):
     plt.ylabel('Distribution')
     plt.savefig(out_file_name, dpi=300)
     pass
-
-
