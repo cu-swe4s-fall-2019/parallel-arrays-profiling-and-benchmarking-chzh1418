@@ -1,0 +1,2 @@
+Searching time : 24.297484874725342
+main prog running time: 77.3324408531189
