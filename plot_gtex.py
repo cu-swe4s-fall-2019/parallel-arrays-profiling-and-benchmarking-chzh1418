@@ -147,7 +147,7 @@ def main():
                 data_header.sort(key=lambda tup: tup[0])
                 continue
             sort_end = time.time()
-            print('Sorting time: ' + str(sort_end - sort_start))
+            # print('Sorting time: ' + str(sort_end - sort_start))
 
         # Searching benchmarking
         A = l.rstrip().split('\t')
@@ -163,7 +163,9 @@ def main():
             print('Searching time : ' + str(search_end - search_start))
     data_viz.boxplot(group_counts, args.output_file, 'boxplot')
     main_end = time.time()
-    print('main prog running time: ' + str(main_end - main_start))
+    # print('main prog running time: ' + str(main_end - main_start))
+    sys.exit(0)
+
 
 if __name__ == '__main__':
     main()
