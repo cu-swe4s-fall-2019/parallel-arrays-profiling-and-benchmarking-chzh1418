@@ -25,9 +25,9 @@ class TestPlotGtex(unittest.TestCase):
     # def test_linear_search_rand(self):
     def test_binary_search(self):
         # Successful search
-        A = ['a', 'b', 'c', 'd', 'e', 'f']
+        A = [['a', 1], ['b', 2], ['c', 3], ['d', 4], ['e', 5], ['f', 7]]
         BS = plot_gtex.binary_search('e', A)
-        self.assertEqual(4, A[BS])
+        self.assertEqual(5, BS)
 
     def test_binary_search_fail(self):
         # No hits in the list
