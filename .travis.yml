@@ -12,3 +12,6 @@ before_install:
     - conda install --yes python=3.6
       
 script:
+        pycodestyle *.py
+        bash functional_test.sh
+        python unit_test_plot_gtex.py
