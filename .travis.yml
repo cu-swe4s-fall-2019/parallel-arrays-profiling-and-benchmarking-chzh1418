@@ -10,7 +10,7 @@ before_install:
     - conda activate test
     - conda install -y pycodestyle
     - conda install --yes python=3.6
-      
+    - conda install --y matplotlib  
 script:
     - pycodestyle *.py
     - bash functional_test.sh
