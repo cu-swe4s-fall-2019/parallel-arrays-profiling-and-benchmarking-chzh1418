@@ -7,7 +7,7 @@ from matplotlib.backends import pylab_setup
 # Different methods for data visualization
 
 
-def boxplot(Array, out_file_name, title):
+def boxplot(Array, out_file_name, title, box_names):
     """ Boxplot of numerical array and give specified name
     Parameters
     --------
@@ -37,5 +37,6 @@ def boxplot(Array, out_file_name, title):
     plt.title(title)
     plt.xlabel('Box')
     plt.ylabel('Distribution')
+    plt.xticks(range(1, len(box_names)+1), box_names, rotation='vertical')
     plt.savefig(out_file_name, dpi=300)
     pass
