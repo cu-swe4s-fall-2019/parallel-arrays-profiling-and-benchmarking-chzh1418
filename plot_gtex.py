@@ -161,7 +161,7 @@ def main():
                         group_counts[group_idx].append(int(A[member_idx]))
             search_end = time.time()
             print('Searching time : ' + str(search_end - search_start))
-    data_viz.boxplot(group_counts, args.output_file, 'boxplot')
+    data_viz.boxplot(group_counts, args.output_file, 'boxplot', groups)
     main_end = time.time()
     # print('main prog running time: ' + str(main_end - main_start))
     sys.exit(0)
