@@ -30,8 +30,7 @@ def boxplot(Array, out_file_name, title, box_names):
     # Check input
     if out_file_name is None:
         raise NameError('Out_file_name required')
-    if path.exists(out_file_name):
-        raise SystemExit('File already exits')
+        sys.exit(1)
 
     plt.boxplot(Array)
     plt.title(title)
@@ -39,4 +38,4 @@ def boxplot(Array, out_file_name, title, box_names):
     plt.ylabel('Distribution')
     plt.xticks(range(1, len(box_names)+1), box_names, rotation='vertical')
     plt.savefig(out_file_name, dpi=300)
-    pass
+    sys.exit(0)
