@@ -13,6 +13,11 @@ To get the boxplot, user can use the following commands
 ```
 python plot_gtex.py --gene_name FOXC1 --gene_reads GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz --group_type SMTS --sample_attributes GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --outfile_name Foxc1.png
 ```
+To use hash table, use the following commands
+```
+python plot_gtex1.py --gene_name FOXC1 --gene_reads GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz --group_type SMTS --sample_attributes GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --output_file Foxc1_hash.png
+```
+![](Foxc1_hash.png)
 To do unittest
 ```
 python unit_test_plot_gtex.py
@@ -45,4 +50,8 @@ For binary search
 	* Sorting time: 15.189553022384644
 	* Searching time : 0.11153340339660645
 	* main prog running time: 64.91340494155884
+```
+```
+For hash table
+	* main prog running time 20.657002925872803
 ```
