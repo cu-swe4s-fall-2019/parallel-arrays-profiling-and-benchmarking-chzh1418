@@ -1,6 +1,5 @@
 # Parallel-arrays-profiling-and-benchmarking
 [![Build Status](https://travis-ci.com/cu-swe4s-fall-2019/parallel-arrays-profiling-and-benchmarking-chzh1418.svg?branch=master)](https://travis-ci.com/cu-swe4s-fall-2019/parallel-arrays-profiling-and-benchmarking-chzh1418)
-
 Parallel Arrays, Profiling, and Benchmarking
 Users must download those files for scripts to run successfully.
 Files:
