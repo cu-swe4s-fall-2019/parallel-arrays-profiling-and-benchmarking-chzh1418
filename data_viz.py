@@ -37,5 +37,5 @@ def boxplot(Array, out_file_name, title, box_names):
     plt.xlabel('Box')
     plt.ylabel('Distribution')
     plt.xticks(range(1, len(box_names)+1), box_names, rotation='vertical')
-    plt.savefig(out_file_name, dpi=300)
+    plt.savefig(out_file_name, dpi=500, bbox_inches='tight')
     sys.exit(0)
