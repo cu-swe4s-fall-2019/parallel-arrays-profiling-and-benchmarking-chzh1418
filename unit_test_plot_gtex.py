@@ -35,6 +35,31 @@ class TestPlotGtex(unittest.TestCase):
         BS = plot_gtex.binary_search('7', A)
         self.assertEqual(-1, BS)
 
+    def test_sample_info_hash(self):
+        sample_info = 'GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt'
+        group = 'SMTS'
+        A = plot_gtex.sample_info_hash_table(group, sample_info)
+        self.assertEqual(A[1][3], 'Muscle')
+
+    def test_sample_info_hash_groups(self):
+        sample_info = 'GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt'
+        group = 'SMTS'
+        A = plot_gtex.sample_info_hash_table(group, sample_info)
+        self.assertEqual(len(A[1]), 31)
+
+    def test_sample_info_hash_table(self):
+        sample_info = 'GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt'
+        group = 'SMTS'
+        A = plot_gtex.sample_info_hash_table(group, sample_info)
+        self.assertEqual(A[0].search('Blood')[0], 'GTEX-1117F-0003-SM-58Q7G')
+
+    def test_sample_info_hash_table_wrong(self):
+        sample_info = 'GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt'
+        group = 'SMTS'
+        A = plot_gtex.sample_info_hash_table(group, sample_info)
+        self.assertNotEqual(A[0].search('Blood')[1],
+                            'GTEX-1117F-0003-SM-58Q7G')
+
 
 if __name__ == '__main__':
     unittest.main()

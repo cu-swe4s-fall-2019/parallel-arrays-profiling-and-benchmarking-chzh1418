@@ -80,9 +80,7 @@ def binary_search(key, D):
 
 def sample_info_hash_table(group_col_name, sample_info_file_name):
     # get arguments for argparse
-    args = parse_args()
-    sample_info_file_name = args.sample_attributes
-    group_col_name = args.group_type
+    # args = parse_args()
     sample_id_col_name = 'SAMPID'
     # Check file exist or not
     if (not os.path.exists(sample_info_file_name)):
